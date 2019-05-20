@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Scala.js Tutorial</title>
+</head>
+<body>
+<!-- Include Scala.js compiled code -->
+<script type="text/javascript" src="./target/scala-2.12/cars-example-fastopt.js"></script>
+<script>
+
+    var skoda = {
+        brand: "Skoda",
+        model: "2010",
+        id: null
+    };
+
+    console.log(CarState.carsSize());
+    var id = CarState.addCar(skoda);
+    console.log(CarState.carsSize());
+    console.log(id);
+    console.log(CarState.findCar(id));
+    console.log(CarState.findCar('1120c387-1d2a-48aa-9d08-0b81068f6486'));
+
+    console.log(CarState.allCars())
+</script>
+</body>
+</html>
